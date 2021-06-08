@@ -29,4 +29,4 @@ do
 
 	echo $util is present and version is $ver
 
-done<$1 #giving filename as input of while loop
+done
