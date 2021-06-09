@@ -16,17 +16,18 @@ then
 	exit 1
 fi
 
-utils=$(cat $1)
+utils=$(cat $1) # storing files contents in util
 
 for util in $utils
 do 
-	ver=$(dpkg -l | grep " $util " | awk '{print $3}')
-	if [ -z $ver ]
+	ver=$(dpkg -l | grep " $util " | awk '{print $3}') #getting version of utility
+	if [ -z $ver ] #if util is not present ver will be empty
 	then
 		echo $util is not present
 		continue
 	fi
 
+	#printing version of utility
 	echo $util is present and version is $ver
 
 done

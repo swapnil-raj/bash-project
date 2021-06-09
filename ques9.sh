@@ -3,4 +3,4 @@
 while read i 
 do 
 echo $i
-done< <(sudo df -a --output=source,target,fstype)
+done< <(sudo df -a --output=source,target,fstype) #this command helps printing source destination and filesytem type
